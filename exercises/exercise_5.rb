@@ -10,4 +10,4 @@ puts "----------"
 # Your code goes here ...
 puts "Total Revenue is #{Store.sum(:annual_revenue)}"
 puts "Average Revenue is #{Store.sum(:annual_revenue)/Store.count}"
-puts "There are #{Store.where("annual_revenue > ?", 999999).count} high earning stores"
+puts "There are #{Store.where("annual_revenue >= ?", 1000000).count} high earning stores"
