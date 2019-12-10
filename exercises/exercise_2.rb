@@ -5,3 +5,12 @@ puts "Exercise 2"
 puts "----------"
 
 # Your code goes here ...
+@store1 = Store.find_by(id:1)
+puts "Old Instance Name "+@store1.name
+
+@store2 = Store.find_by(id:2)
+
+@store1.update(name:"Commercial")
+
+puts "New Instance Name "+@store1.name
+puts "Direct DB Query Name "+Store.find_by(id:1).name
